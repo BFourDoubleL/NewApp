@@ -8,9 +8,13 @@ const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 
 // API setup
-const API_KEY = "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";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-Pro:generateContent?key=${API_KEY}`;
+const API_KEY = "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";
+import OpenAI from "openai";
 
+const openai = new OpenAI({
+    organization: "org-rixoVYvUfwi5fvwgUgo0pY7C",
+    project: "$PROJECT_ID",
+});
 // Initialize user message and file data
 const userData = {
   message: null,
